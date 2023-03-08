@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Beethoven - Moonlight Sonata (1st Movement)-sbTVZMJ9Z2I.mp3-949385e6c8c7cf9fb7e6c6eb7b01a780.mp3str"
+
+[deps]
+
+source_file="res://audios/Beethoven - Moonlight Sonata (1st Movement)-sbTVZMJ9Z2I.mp3"
+dest_files=[ "res://.import/Beethoven - Moonlight Sonata (1st Movement)-sbTVZMJ9Z2I.mp3-949385e6c8c7cf9fb7e6c6eb7b01a780.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

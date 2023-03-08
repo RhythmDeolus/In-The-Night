@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Debussy - Clair de Lune-WNcsUNKlAKw.mp3-97de47f6fa9dbdf2dd33d768929c2013.mp3str"
+
+[deps]
+
+source_file="res://audios/Debussy - Clair de Lune-WNcsUNKlAKw.mp3"
+dest_files=[ "res://.import/Debussy - Clair de Lune-WNcsUNKlAKw.mp3-97de47f6fa9dbdf2dd33d768929c2013.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

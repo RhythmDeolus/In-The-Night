@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/background.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/snowfall/snowfall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://main_menu.gd" type="Script" id=3]
+[ext_resource path="res://assets/gui/play.png" type="Texture" id=4]
+[ext_resource path="res://settings.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/gui/setting_wheel.png" type="Texture" id=6]
+[ext_resource path="res://assets/gui/godot.png" type="Texture" id=7]
+
+[node name="main_menu" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( -5, 889 )
+rotation = -1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 0, 0, 1024, 600 )
+
+[node name="settings" parent="CanvasLayer" instance=ExtResource( 5 )]
+
+[node name="main" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="TextureButton" parent="CanvasLayer/main"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -82.0
+margin_top = -27.0
+margin_right = 587.0
+margin_bottom = 290.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="setting_button" type="TextureButton" parent="CanvasLayer/main"]
+margin_left = 33.0
+margin_top = 478.0
+margin_right = 857.0
+margin_bottom = 1342.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 6 )
+texture_disabled = ExtResource( 6 )
+texture_focused = ExtResource( 6 )
+
+[node name="godot_credit" type="TextureButton" parent="CanvasLayer/main"]
+margin_left = 883.0
+margin_top = 478.0
+margin_right = 1983.0
+margin_bottom = 1542.0
+rect_scale = Vector2( 0.08, 0.08 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+texture_disabled = ExtResource( 7 )
+texture_focused = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="snowfall" parent="." instance=ExtResource( 2 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[connection signal="visibility_changed" from="." to="." method="_on_main_menu_visibility_changed"]
+[connection signal="back" from="CanvasLayer/settings" to="." method="_on_settings_back"]
+[connection signal="pressed" from="CanvasLayer/main/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/main/setting_button" to="." method="_on_setting_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/main/godot_credit" to="." method="_on_godot_credit_pressed"]

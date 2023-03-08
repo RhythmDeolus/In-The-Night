@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Chopin - Nocturne in E Flat Major (Op. 9 No. 2)-p29JUpsOSTE.mp3-b934de155ce7d65fbdd7ed8b21a3724d.mp3str"
+
+[deps]
+
+source_file="res://audios/Chopin - Nocturne in E Flat Major (Op. 9 No. 2)-p29JUpsOSTE.mp3"
+dest_files=[ "res://.import/Chopin - Nocturne in E Flat Major (Op. 9 No. 2)-p29JUpsOSTE.mp3-b934de155ce7d65fbdd7ed8b21a3724d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

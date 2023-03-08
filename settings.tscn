@@ -1,0 +1,153 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/gui/music.png" type="Texture" id=1]
+[ext_resource path="res://assets/gui/back.png" type="Texture" id=2]
+[ext_resource path="res://assets/gui/tick.png" type="Texture" id=3]
+[ext_resource path="res://assets/gui/sfx.png" type="Texture" id=4]
+[ext_resource path="res://assets/gui/slider.png" type="Texture" id=5]
+[ext_resource path="res://settings.gd" type="Script" id=6]
+[ext_resource path="res://assets/gui/check2.png" type="Texture" id=7]
+[ext_resource path="res://assets/gui/fullscreen.png" type="Texture" id=8]
+[ext_resource path="res://assets/gui/check1.png" type="Texture" id=9]
+[ext_resource path="res://assets/background.jpg" type="Texture" id=10]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 5 )
+region_rect = Rect2( 75.2827, 79.5155, 1458.91, 138.716 )
+margin_bottom = 16.7416
+axis_stretch_horizontal = 1
+modulate_color = Color( 1, 0.984314, 0.984314, 1 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 5 )
+region_rect = Rect2( 75.283, 79.516, 1458.91, 138.716 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+modulate_color = Color( 0.443137, 0.443137, 0.443137, 1 )
+
+[node name="settings" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -5, 889 )
+rotation = -1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+centered = false
+region_rect = Rect2( 0, 0, 1024, 600 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 51.0
+margin_top = 44.0
+margin_right = 832.0
+margin_bottom = 480.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_left = 340.0
+margin_top = 206.0
+margin_right = 2359.0
+margin_bottom = 822.0
+rect_scale = Vector2( 0.2, 0.2 )
+custom_constants/separation = 237
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
+margin_right = 2192.0
+margin_bottom = 334.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer2/HBoxContainer"]
+margin_right = 730.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer2/HBoxContainer"]
+margin_left = 734.0
+margin_right = 2192.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 1 )
+custom_styles/grabber_area_highlight = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2"]
+margin_top = 571.0
+margin_right = 2192.0
+margin_bottom = 831.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer2/HBoxContainer2"]
+margin_right = 730.0
+margin_bottom = 260.0
+size_flags_horizontal = 3
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer2/HBoxContainer2"]
+margin_left = 734.0
+margin_right = 2192.0
+margin_bottom = 260.0
+size_flags_vertical = 1
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 1 )
+custom_styles/grabber_area_highlight = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2"]
+margin_top = 1068.0
+margin_right = 2192.0
+margin_bottom = 1405.0
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer2/HBoxContainer3"]
+margin_right = 1720.0
+margin_bottom = 337.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer2/HBoxContainer3"]
+margin_left = 1724.0
+margin_right = 2192.0
+margin_bottom = 337.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 7 )
+custom_icons/unchecked = ExtResource( 9 )
+enabled_focus_mode = 0
+
+[connection signal="visibility_changed" from="." to="." method="_on_settings_visibility_changed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="value_changed" from="VBoxContainer2/HBoxContainer/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="toggled" from="VBoxContainer2/HBoxContainer3/CheckBox" to="." method="_on_CheckBox_toggled"]
