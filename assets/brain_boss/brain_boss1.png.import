@@ -14,8 +14,8 @@ dest_files=[ "res://.import/brain_boss1.png-e34db815ab491719f6e2d05d83a4a13c.ste
 
 [params]
 
-compress/mode=0
-compress/lossy_quality=0.7
+compress/mode=1
+compress/lossy_quality=0.5
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

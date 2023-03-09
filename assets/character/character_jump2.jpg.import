@@ -14,8 +14,8 @@ dest_files=[ "res://.import/character_jump2.jpg-f57a8e5f09e53a9710578fe5f8d4319b
 
 [params]
 
-compress/mode=0
-compress/lossy_quality=0.7
+compress/mode=1
+compress/lossy_quality=0.5
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

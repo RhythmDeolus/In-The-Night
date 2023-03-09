@@ -14,8 +14,8 @@ dest_files=[ "res://.import/setting_wheel.png-0b2bb6489c20ec3d95b75c8c458e4b8c.s
 
 [params]
 
-compress/mode=0
-compress/lossy_quality=0.7
+compress/mode=1
+compress/lossy_quality=0.5
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

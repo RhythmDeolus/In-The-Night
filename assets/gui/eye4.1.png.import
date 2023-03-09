@@ -14,8 +14,8 @@ dest_files=[ "res://.import/eye4.1.png-928163af40186af55847eb57c6f21c3f.stex" ]
 
 [params]
 
-compress/mode=0
-compress/lossy_quality=0.7
+compress/mode=1
+compress/lossy_quality=0.5
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

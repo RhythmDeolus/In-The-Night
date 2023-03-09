@@ -14,8 +14,8 @@ dest_files=[ "res://.import/madeby.png-90ec00b6aab080f2fe90f592d977f884.stex" ]
 
 [params]
 
-compress/mode=0
-compress/lossy_quality=0.7
+compress/mode=1
+compress/lossy_quality=0.5
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

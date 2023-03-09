@@ -14,8 +14,8 @@ dest_files=[ "res://.import/character_run2.jpg-cdcfc5e9755e48217d01796468b45d71.
 
 [params]
 
-compress/mode=0
-compress/lossy_quality=0.7
+compress/mode=1
+compress/lossy_quality=0.5
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
