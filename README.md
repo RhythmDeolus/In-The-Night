@@ -1,6 +1,6 @@
 # In The Night :snowflake:
 ---
-&nbsp; &nbsp; &nbsp; &nbsp; A small 2d platformer made with Godot Engine :robot: 
+A small 2d platformer made with Godot Engine :robot: 
 
 **Hosted on:**
 &nbsp; &nbsp; &nbsp; &nbsp; [Github Link :cat:](https://rhythmdeolus.github.io/InTheNight-Live/)
